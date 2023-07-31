@@ -13,7 +13,6 @@ class AuthService {
     name: string;
     password: string;
   }): Promise<User> {
-    console.log("test", userData);
     const findUser: User = await this.users.findOne({ email: userData.email });
     if (findUser)
       throw new HttpException(

@@ -15,7 +15,6 @@ const authMiddleware = async (
   try {
     const Authorization =
       req.body.token || req.query.token || req.headers["x-access-token"];
-    console.log("====>", Authorization);
     if (Authorization) {
       const secretKey: string = process.env.SECRET_KEY;
       const verificationResponse = (await jwt.verify(
