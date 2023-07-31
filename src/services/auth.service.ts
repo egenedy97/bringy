@@ -19,7 +19,10 @@ class AuthService {
         409,
         `You're email ${userData.email} already exists`
       );
-
+    const reg = new RegExp("^(?=.*[a-zA-Z])(?=.*d).{8,12}$");
+    if (!reg.test(userData.password)) {
+      throw new HttpException(403, "Invalid Password format");
+    }
     const hashedPassword = await bcrypt.hash(userData.password, 10);
     const createUserData: User = await this.users.create({
       ...userData,
