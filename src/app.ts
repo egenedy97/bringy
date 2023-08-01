@@ -45,6 +45,9 @@ class App {
       this.app.use("/", route.router);
     });
   }
+  public getServer() {
+    return this.app;
+  }
   public listen() {
     this.app.listen(this.port, () => {
       console.log(`=================================`);

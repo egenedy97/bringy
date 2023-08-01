@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { HttpException } from "../exceptions/HttpException";
 import { User } from "../interfaces/user.interface";
 import { UserModel } from "../models/user.model";
