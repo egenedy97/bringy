@@ -43,3 +43,9 @@ docker-compose up
     app.ts
     server.ts
 ```
+
+### Adv Features .
+
+- you can filter with any values you want and makeing sorting with any field with a little code .
+
+- I used OOP concept with allow me to organize code in an easy way.
